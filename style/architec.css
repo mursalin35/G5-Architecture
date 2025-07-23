@@ -24,9 +24,22 @@ body {
     cursor: pointer;
 }
 
+main>section {
+    margin-top: 130px;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 /* dark 02 */
 .text-gray {
     color: #424242;
+}
+
+.text-primary {
+    color: #ff900e;
 }
 
 /* dark 03 */
@@ -81,13 +94,61 @@ body {
     font-size: 4rem;
 }
 
-.banner-img {
+.banner-img,
+.tems-img {
     width: 100%;
+}
+
+/* Tem and Future Related style */
+.tems {
+    align-items: center;
+}
+
+.tem-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.ours-future {
+    margin-left: 130px;
+    max-width: 530px;
+}
+
+.future-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.quick {
+    font-weight: 500;
 }
 
 /* Responsive Mediaquary */
 @media screen and (max-width: 576px) {
-    .navber, .nav-link{
+
+    .navber,
+    .nav-link,
+    .tems {
         flex-direction: column;
+    }
+
+    .tem-img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .ours-future {
+        margin-left: 20px;
+    }
+}
+
+/* Teblet device Responsive */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .tems {
+        flex-direction: column;
+    }
+
+    .ours-future {
+        margin: 20px auto;
     }
 }
